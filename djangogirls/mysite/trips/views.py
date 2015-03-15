@@ -5,14 +5,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def hello_world(request	):
-    output = """
-        <!DOCTYPE html>
-        <html>
-            <head></head>
-            <body>
-                Hello World! <em style="color:LightSeaGreen;">{current_time}</em>
-            </body>
-        </html>
-    """.format(current_time = datetime.now())
-
-    return HttpResponse(output)
+    return render(request,
+        "hello_world.html",
+        {'current_time': datetime.now()})
