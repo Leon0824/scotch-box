@@ -1,2 +1,9 @@
-.DS_STORE
 .vagrant
+.DS_STORE
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
